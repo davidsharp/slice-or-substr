@@ -11,7 +11,7 @@ class App extends React.Component {
   }
 
   handleChange(param) {
-    return (event)=>this.setState({[param]: event.target.value.length>0?event.target.value:undefined});
+    return (event)=>this.setState({[param]: param=='value'||event.target.value.length>0?event.target.value:undefined});
   }
 
   render() {
