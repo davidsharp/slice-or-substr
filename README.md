@@ -1,5 +1,9 @@
-# slice-or-substr
-Little React app that lets you know which to use
+# slice - substr - substring
 
-## Where is it then?
-This is a Gltich app, so I'm just exporting to the Glitch branch. You can access it online at https://slice-or-substr.glitch.me
+Little React-based app for testing whether you're after slice, substr or substring for your string manipulation
+
+
+### TODO
+- emoji
+- background highlight whitespace
+- do something cool with string position?
