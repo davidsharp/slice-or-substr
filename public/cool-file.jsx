@@ -30,11 +30,11 @@ class App extends React.Component {
           <input type="text" value={this.state.param2} onChange={this.handleChange('param2')} />
         </label>
         <br/>
-        <h3>{`${this.state.value}.slice(${this.state.param1},${this.state.param2})`}</h3>
+        <h3>{`'${this.state.value}'.slice(${this.state.param1},${this.state.param2})`}</h3>
         <StringTable str={this.state.value} sub={this.state.value.slice(this.state.param1,this.state.param2)} />
-        <h3>{`${this.state.value}.substr(${this.state.param1},${this.state.param2})`}</h3>
+        <h3>{`'${this.state.value}'.substr(${this.state.param1},${this.state.param2})`}</h3>
         <StringTable str={this.state.value} sub={this.state.value.substr(this.state.param1,this.state.param2)} />
-        <h3>{`${this.state.value}.substring(${this.state.param1},${this.state.param2})`}</h3>
+        <h3>{`'${this.state.value}'.substring(${this.state.param1},${this.state.param2})`}</h3>
         <StringTable str={this.state.value} sub={this.state.value.substring(this.state.param1,this.state.param2)} />
       </form>
     );

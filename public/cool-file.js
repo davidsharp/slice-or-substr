@@ -31,11 +31,11 @@ class App extends React.Component {
           React.createElement("input", {type: "text", value: this.state.param2, onChange: this.handleChange('param2')})
         ), 
         React.createElement("br", null), 
-        React.createElement("h3", null, `${this.state.value}.slice(${this.state.param1},${this.state.param2})`), 
+        React.createElement("h3", null, `'${this.state.value}'.slice(${this.state.param1},${this.state.param2})`), 
         React.createElement(StringTable, {str: this.state.value, sub: this.state.value.slice(this.state.param1,this.state.param2)}), 
-        React.createElement("h3", null, `${this.state.value}.substr(${this.state.param1},${this.state.param2})`), 
+        React.createElement("h3", null, `'${this.state.value}'.substr(${this.state.param1},${this.state.param2})`), 
         React.createElement(StringTable, {str: this.state.value, sub: this.state.value.substr(this.state.param1,this.state.param2)}), 
-        React.createElement("h3", null, `${this.state.value}.substring(${this.state.param1},${this.state.param2})`), 
+        React.createElement("h3", null, `'${this.state.value}'.substring(${this.state.param1},${this.state.param2})`), 
         React.createElement(StringTable, {str: this.state.value, sub: this.state.value.substring(this.state.param1,this.state.param2)})
       )
     );
