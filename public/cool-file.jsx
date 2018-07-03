@@ -15,33 +15,37 @@ class App extends React.Component {
   }
 
   render() {
+    //const {value, param1, param2} = this.state
+    const value = this.state.value
+    const param1 = this.state.param1
+    const param2 = this.state.param2
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
           String:
-          <input type="text" value={this.state.value} onChange={this.handleChange('value')} />
+          <input type="text" value={value} onChange={this.handleChange('value')} />
         </label>
         <label>
           Param 1:
-          <input type="text" value={this.state.param1} onChange={this.handleChange('param1')} />
+          <input type="text" value={param1} onChange={this.handleChange('param1')} />
         </label>
         <label>
           Param 2:
-          <input type="text" value={this.state.param2} onChange={this.handleChange('param2')} />
+          <input type="text" value={param2} onChange={this.handleChange('param2')} />
         </label>
         <br/>
-        <h3>{`'${this.state.value}'.slice(${this.state.param1},${this.state.param2})`}</h3>
-        <StringTable str={this.state.value} sub={this.state.value.slice(this.state.param1,this.state.param2)} />
-        <h3>{`'${this.state.value}'.substr(${this.state.param1},${this.state.param2})`}</h3>
-        <StringTable str={this.state.value} sub={this.state.value.substr(this.state.param1,this.state.param2)} />
-        <h3>{`'${this.state.value}'.substring(${this.state.param1},${this.state.param2})`}</h3>
-        <StringTable str={this.state.value} sub={this.state.value.substring(this.state.param1,this.state.param2)} />
+        <h3>{`'${value}'.slice(${param1},${param2})`}</h3>
+        <StringTable str={value} sub={value.slice(param1,param2)} params={[param1,param2]} />
+        <h3>{`'${value}'.substr(${param1},${param2})`}</h3>
+        <StringTable str={value} sub={value.substr(param1,param2)} params={[param1,param2]} />
+        <h3>{`'${value}'.substring(${param1},${param2})`}</h3>
+        <StringTable str={value} sub={value.substring(param1,param2)} params={[param1,param2]} />
       </form>
     );
   }
 }
 
-const StringTable = ({str, sub}) => (<table>
+const StringTable = ({str, sub, params}) => (<table>
     <thead>
         <tr>
           {str.split('').map((c,i)=>(<th>{ i }</th>))}
